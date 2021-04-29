@@ -1,0 +1,28 @@
+function fetchBMI(bmi){
+
+            let lowerThan =[
+
+                {
+                    key:'Underweight',
+                    value:18.5
+                },{
+                    key:'Normal weight',
+                    value:25
+                },{
+                    key:'Overweight',
+                    value:30
+                }
+            ]
+
+
+            for (const obj of lowerThan){
+
+                if(bmi<obj.value){
+                    return obj.key
+                }
+            }
+
+            if(bmi>30){
+                return "Obesity"
+            }
+        }
